@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/detail.css">
+
+
+  <a href="<?= $requestUrl ?>/products"><i class="fas fa-arrow-circle-left"></i></a>
+  <div class="beerDetail">
+    <img src="<?= $wwwUrl?>/images/beers/<?=$oneBeer['Photo']?>">
+    <h3><?=$oneBeer['Name']?></h3>
+    <p><?=$oneBeer['Description']?></p>
+
+    <div class="paymentPart">
+      <span>Prix Unitaire :
+        <em><?= $oneBeer["SalePrice"]?> €</em>
+      </span>
+      <form>
+        <input type="text" name="quantity" id="beer-<?=$oneBeer['Id']?>">
+        <button class="addToBasket" data-name="<?=$oneBeer['Name']?>" data-price="<?=$oneBeer['SalePrice']?>" data-id="<?=$oneBeer['Id']?>"><i class="fas fa-plus-circle"></i></button>
+      </form>
+    </div>
+
+  </div>

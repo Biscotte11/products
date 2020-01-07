@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/admin.css">
+
+
+<div>
+<h3>Admin</h3>
+<hr>
+<h4>Gestion des bières !</h4>
+<a class="addBeer" class="" href="<?= $requestUrl ?>/admin/product/add">
+<i class="fas fa-plus-circle"></i>
+<p>Ajouter une nouvelle bière</p>
+</a>
+<table class="tableBeer">
+  <tbody>
+         <tr class="titleBeer">
+             <td>Photo</td>
+             <td>Nom</td>
+             <td>Action</td>
+         </tr>
+         <tr>
+             <?php foreach ($beers as $beer) { ?>
+              <td class="aBeer"><img src="<?= $wwwUrl?>/images/beers/<?=$beer['Photo']?>"></td>
+              <td><?=$beer['Name']?></td>
+              <td>
+              <a href="<?= $requestUrl ?>/admin/product/update?id=<?=$beer['Id']?>"><i class="fas fa-pen"></i></a>
+              <a href="<?= $requestUrl ?>/admin/product/delete?id=<?=$beer['Id']?>"><i class="fas fa-trash-alt"></i></a></td>
+         </tr>
+         <?php } ?>
+  </tbody>
+</table>
+
+<hr>
+<h4>Gestion des utilisateurs !</h4>
+<table class="userTable">
+  <tbody>
+      <tr>
+        <td>Nom</td>
+        <td>Prénom</td>
+        <td>Email</td>
+        <td>Role</td>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <?php foreach ($utilisateurs as $utilisateur) { ?>
+          <?php if($utilisateur['Email'] !== $_SESSION['user']['email']) { ?>
+        <td><?=$utilisateur['LastName']?></td>
+        <td><?=$utilisateur['FirstName']?></td>
+        <td><?=$utilisateur['Email']?></td>
+        <td>
+          <select class="userRole" data-id="<?=$utilisateur['Id']?>">
+            	<?php if($utilisateur['Role'] == 'user') {?>
+                <option>Admin</option>
+                <option>User</option>
+            	<?php } else {?>
+                <option value="admin" selected>admin</option>
+                <option value="user">user</option>
+              <?php } ?>
+          </select>
+        <td><a href="<?=$requestUrl ?>/admin/product/delete?id=<?=$utilisateur['Id']?>"><i class="fas fa-trash-alt"></i></a></td>
+      </tr>
+    <?php } ?>
+  <?php } ?>
+  </tbody>
+</table>
+
+<hr>
+<h4>Gestion des commandes !</h4>
+<a class="addBeer" class="" href="<?= $requestUrl ?>/admin/order">
+<i class="fas fa-plus-circle"></i>
+<p>Gestion des commandes</p>
+</a>
+</div>
+
+<script src="<?= $wwwUrl ?>/js/admin.js"></script>

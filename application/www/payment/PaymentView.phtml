@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="<?= $wwwUrl ?>/css/payment.css">
+<h3>Paiement de votre commande</h3>
+<div class="container">
+	<form action="<?= $requestUrl?>/payment/charge" method="post" id="payment-form" class="p-form">
+		<input type="hidden" name="orders" id="orders">
+		<div class="form-row">
+
+		</div>
+		<button>Payer</button>
+	</form>
+</div>

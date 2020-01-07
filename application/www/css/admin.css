@@ -1,0 +1,79 @@
+main i {
+	color: #FFBD2F;
+	font-size: 21px;
+	margin-right: 1%;
+}
+
+main h4 {
+	font-size:18px;
+}
+
+.addBeer {
+	color: #FFBD2F;
+	font-family: 'Fjalla One', cursive;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+.tableBeer {
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 15px 2%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.titleBeer td {
+	font-family: 'Fjalla One', cursive;
+	font-size: 23px;
+}
+
+.tableBeer tr {
+	border: 2px solid #FFBD2F;
+}
+
+.tableBeer td {
+	padding: 2px 2%;
+}
+
+.tableBeer .pBeer {
+	width: 25%;
+}
+
+.tableBeer .nBeer {
+	width: 50%;
+	font-family: 'Fjalla One', cursive;
+	font-size: 18px;
+}
+
+.tableBeer .aBeer {
+	width: 27%;
+}
+
+.tableBeer tr td img {
+	max-width: 100%;
+}
+
+.userTable {
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 15px 2%;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.userTable tr {
+	border: 2px solid #FFBD2F;
+}
+
+.userTable td {
+	padding: 0 3%;
+	width: 19%;
+	height: 40px;
+}
+
+.userTable select {
+	overflow: none;
+}

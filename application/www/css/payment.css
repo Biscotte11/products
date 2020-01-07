@@ -1,0 +1,121 @@
+main {
+	width: 100%;
+	padding:0;
+	text-align: center;
+}
+
+h3 {
+	width: 100%;
+	text-align: center;
+}
+
+.p-form {
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 10px 2% 20px 2%;
+}
+
+
+
+.p-form input {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	height: 32px;
+  border-radius: 12px;
+  border: 1px solid #c4c3c2;
+  padding-left: 3%;
+  outline: none;
+}
+
+
+
+.p-form img {
+
+	width: 90%;
+
+}
+
+.StripeElement {
+  font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 32px;
+  	border-radius: 12px;
+  	border: 1px solid #c4c3c2;
+  	padding-left: 3%;
+  	outline: none;
+}
+
+.StripeElement {
+
+}
+
+.p-form textarea {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	min-height: 70px;
+  border-radius: 12px;
+  border: 1px solid #c4c3c2;
+  padding-left: 3%;
+  outline: none;
+
+}
+
+.p-form label {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.p-form input[type="file"] {
+	border: none;
+	font-size: 15px;
+	outline: none;
+}
+
+.p-form input[type="submit"] {
+	background-color: #FFBD2F;
+	width: 30%;
+	color: white;
+	text-shadow:0 1px 0 #c4c3c2, 0 -1px 0 #c4c3c2;
+}
+
+.p-form button {
+
+	background-color: #FFBD2F;
+	width: 30%;
+	color: white;
+	text-shadow:0 1px 0 #c4c3c2, 0 -1px 0 #c4c3c2;
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	height: 32px;
+    border-radius: 12px;
+    border: 1px solid #c4c3c2;
+    padding-left: 3%;
+    outline: none;
+}
+
+
+@media only screen and (max-width:760px) {
+	.p-form {
+		width: 90%;
+	}
+
+}

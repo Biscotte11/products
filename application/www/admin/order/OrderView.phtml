@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/adminOrder.css">
+
+
+<div>
+<h3>Récapitulatif des commandes</h3>
+<a class="back" class="" href="<?= $requestUrl ?>/admin"><i class="fas fa-plus-circle"></i> Retour vers l'admin</a>
+<p>Cliquez sur un numéro de commande pour voir le détail</p>
+
+<table class="t-order">
+  <thead>
+        <tr>
+            <th colspan="2">Numéro de commande</th>
+            <th colspan="2">Prix total</th>
+            <th colspan="2">Date de la commande</th>
+        </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($allOrders as $allOrder): ?>
+        <tr>
+          <td colspan="2"><a href="<?= $requestUrl ?>/admin/order/details?id=<?=$allOrder['Id']?>"><?=$allOrder['Id']?></a></td>
+          <td colspan="2"><?=number_format($allOrder['TotalAmount'], 2)?> €</td>
+          <td colspan="2"><?=date('d/m/Y', strtotime($allOrder['CreationTimestamp']))?></td>
+        </tr>
+      <?php endforeach ?>
+    </tbody>
+</table>
+</div>

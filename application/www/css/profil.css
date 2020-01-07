@@ -1,0 +1,80 @@
+.back {
+	color: #FFBD2F;
+    font-family: 'Fjalla One', cursive;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+hr {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.customer-detail {
+	border:2px solid #FFBD2F;
+    font-family: 'Fjalla One', cursive;
+    font-size: 15px;
+    text-decoration: none;
+    width: 25%;
+    padding: 2%;
+    margin-top: 20px;
+}
+
+.customer-detail p {
+	width: 80%;
+	padding: 2%;
+	margin: auto;
+}
+
+.t-order {
+	width: 100%;
+	text-align: center;
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 15px 2%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.t-order th {
+	font-family: 'Fjalla One', cursive;
+	font-size: 18px;
+	padding: 10px 2%;
+}
+
+.t-order td {
+	padding: 10px 2%;
+}
+
+.t-order .link {
+	padding: 0;
+}
+
+.t-order .link a {
+	color:black;
+	text-decoration: none;
+	display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 2%;
+}
+
+.t-order .link a:hover {
+	color: white;
+	background-color:#FFBD2F;
+	text-decoration: underline;
+}
+
+.t-order tr {
+	border: 2px solid #FFBD2F;
+}
+
+@media only screen and (max-width:760px) {
+	.t-order {
+		font-size: 11px;
+	}
+	
+	.t-order th {
+		font-size: 14px;
+	}
+}

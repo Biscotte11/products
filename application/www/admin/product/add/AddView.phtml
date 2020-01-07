@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+
+<h3>Ajoutez une nouvelle bière !</h3>
+<a class="comeBack" href="<?= $requestUrl ?>/admin"><i class="fas fa-arrow-circle-left"></i></a>
+
+<form class="b-form" action="<?= $requestUrl ?>/admin/product/add" method="POST" enctype="multipart/form-data">
+
+
+  <input type="text"  name="name" placeholder="Nom du produit">
+  <input type="file"  name="beer_pict"
+       accept="image/png, image/jpeg">
+  <textarea name="description"
+               rows="5" cols="33">
+  </textarea>
+  <label for="quantity">Quantité</label>
+  <input type="text" name="quantity" placeholder="quantité">
+  <label for="buyprice">Prix d'achat (€)</label>
+  <input type="text" name="buyprice" placeholder="Prix d'achat">
+  <label for="saleprice">Prix de vente</label>
+  <input type="text" name="saleprice" placeholder="Prix de vente">
+  <input type="submit" value="Valider">
+</form>

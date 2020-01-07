@@ -1,0 +1,23 @@
+main h1 {
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+}
+
+main p {
+
+}
+
+#homerHome {
+	width: 80%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+}
+
+#home-presentation {
+	font-size: 18px;
+	font-family:  "Oswald-SemiBold", cursive;
+	line-height: 2;
+	text-align: center;
+}

@@ -1,0 +1,79 @@
+.basketTable {
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 15px 2%;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.basketTable tr {
+	border: 2px solid #FFBD2F;
+}
+
+.basketTable th {
+	padding: 0 3%;
+	width: 19%;
+	height: 40px;
+}
+
+.basketTable td {
+	padding: 0 3%;
+	width: 19%;
+	height: 40px;
+}
+
+.basketTable tfoot {
+} 
+
+.trash-beer {
+	border:none;
+	background-color: white;
+}
+
+.trash-beer i{
+	color: #FFBD2F;
+	font-size: 20px;
+}
+
+.p-form input {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 20px;
+	height: 32px;
+  border-radius: 12px;
+  border: 1px solid #c4c3c2;
+  padding-left: 3%;
+  outline: none;
+  background-color: #FFBD2F;
+	width: 30%;
+	color: white;
+	text-shadow:0 1px 0 #c4c3c2, 0 -1px 0 #c4c3c2;
+}
+
+@media only screen and (max-width:760px) {
+
+	.desktop {
+		display: none;
+	}
+
+	.p-form input {
+		width:60%;
+	}
+
+	main {
+		padding-left: 2%;
+    	padding-right: 2%;
+	}
+
+	.basketTable {
+		font-size: 11px;
+	}
+
+	.basketTable th {
+		font-size: 14px;
+	}
+
+}

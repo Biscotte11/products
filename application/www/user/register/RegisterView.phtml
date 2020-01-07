@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+<h3>Enregistrez-vous !</h3>
+
+<form class="b-form" action="<?=$requestUrl?>/user/register" method="POST" >
+  <input id="firstname" name="firstname" type="text" placeholder="Prénom">
+  <input id="lastname" name="lastname" type="text" placeholder="Nom">
+  <input id="email" name="email" type="text" placeholder="email">
+  <input id="password" name="password" type="password" placeholder="Mot de passe">
+  <input id="adresse" name="adresse" type="text" placeholder="Adresse">
+  <input id="ville" name="ville" type="text" placeholder="Ville">
+  <input id="zip" name="zip" type="text" placeholder="Code postal">
+  <input type="submit" value="Enregistrer">
+</form>

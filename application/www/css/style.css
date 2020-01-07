@@ -1,0 +1,413 @@
+@font-face {
+ font-family: "Oswald-Bold";
+ src: url("../fonts/Oswald/Oswald-Bold.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Oswald-ExtraLight";
+ src: url("../fonts/Oswald/Oswald-ExtraLight.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Oswald-Light";
+ src: url("../fonts/Oswald/Oswald-Light.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Oswald-Medium";
+ src: url("../fonts/Oswald/Oswald-Medium.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Oswald-Regular";
+ src: url("../fonts/Oswald/Oswald-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Oswald-SemiBold";
+ src: url("../fonts/Oswald/Oswald-SemiBold.ttf") format("ttf"),
+}
+
+@font-face {
+ font-family: "Fascinate";
+ src: url("../fonts/Fascinate/FascinateInline-Regular.ttf") format("ttf"),
+}
+
+body {
+	margin: 0;
+	padding:0;
+}
+
+header h1 {
+	text-align: center;
+	padding: 180px 0 80px 0;
+	background-image: url('../images/logo/home2.jpg');
+	text-shadow:0 2px 0 black, 0 -2px 0 black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+}
+
+.background_opacity {
+	opacity: 0.7;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+header h1 a {
+	display: block;
+	text-decoration: none;
+	font-size: 36px;
+	color: #FFBD2F;
+	font-family: 'Indie Flower', cursive;
+	margin: auto;
+	margin-top: -40px;
+	width:50%;
+	text-align: center;
+	position: relative;
+	z-index: 6;
+}
+
+.header-logo {
+	width: 65px;
+    position: relative;
+    top: -25px;
+}
+
+
+
+.hide {
+	display: none;
+}
+
+.nav-bar-mobile {
+	display: none;
+	position: fixed;
+	top : 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	z-index: 10;
+	border-bottom: 2px solid black;
+}
+
+.nav-bar-mobile i {
+	font-size: 50px;
+	padding: 15px;
+	width: 100%;
+}
+
+.nav-bar-mobile .nav-column {
+	display: none;
+	position: fixed;
+	top : 80px;
+	left: 0;
+	right: 0;
+	width: 70%;
+	z-index: 10;
+	background-color: white;
+
+}
+
+.nav-bar-mobile .nav-column a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	font-size: 35px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 2px solid black;
+}
+
+.nav-bar {
+	position: fixed;
+	top : 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid grey;
+	background-color: white;
+	z-index: 10;
+}
+
+.nav-bar .nav-list1 {
+	position: absolute;
+	left : 5%;
+	top: 20px;
+}
+
+.nav-bar .nav-list1  a {
+	position: relative;
+	top: -45px;
+}
+
+.nav-bar .nav-list2 {
+	position: absolute;
+	right : 10%;
+	top: 20px;
+	z-index: 8;
+}
+
+.nav-bar a {
+	text-decoration: none;
+	font-family: 'Fjalla One', cursive;
+	color: black;
+
+	font-size: 18px;
+	padding: 15px;
+}
+
+.nav-bar a.nav-icon {
+	font-size: 20px;
+}
+
+.nav-bar em {
+	background-color: red;
+    border-radius: 50%;
+    width: 13px;
+    height: 15px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    right: 10px;
+    top:-3px;
+}
+
+.nav-bar a:hover {
+	color: #FFBD2F;
+}
+
+.nav-bar .under-nav-list {
+	position: absolute;
+    top: 40px;
+    right: 0;
+    text-align: center;
+    border: 1px solid black;
+  	z-index: 9;
+  	padding: 10px;
+  	background-color: white;
+}
+
+.nav-bar .under-nav-list a {
+	padding: 10px;
+	padding: 4px 14px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+#userButton {
+	display: inline-block;
+}
+
+
+#userButton .fa-user {
+	font-size: 19px;
+}
+
+main {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+footer {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    border-top: 1px solid grey;
+}
+
+/* généraux*/
+
+.f-l {
+	float: left;
+}
+
+.c-b {
+	clear: both;
+}
+
+/*généraux popup*/
+
+.popUp {
+	border: 2px solid #FFBD2F;
+	border-radius:20px;
+	position: fixed;
+    top: 150px;
+    left: 32%;
+    z-index: 15;
+    background-color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.popUp .closePopUp {
+	width: 15%;
+	margin: 5px 20px 0 91%;
+    cursor: pointer;
+
+}
+
+.popUp img {
+	margin-top: 30px;
+	width: 100%;
+}
+
+.closePopUp:hover {
+	color: #FFBD2F;
+}
+
+.popUp button.closePopUp {
+	width: 80%;
+    margin: auto;
+    background-color: #FFBD2F;
+	color: white;
+	text-shadow:0 1px 0 #c4c3c2, 0 -1px 0 #c4c3c2;
+	margin-top: 10px;
+	height: 42px;
+  	border-radius: 12px;
+  	 border: 1px solid #c4c3c2;
+    padding-left: 3%;
+    outline: none;
+}
+
+/*beau formulaire*/
+
+h3 {
+	font-family: 'Fjalla One', cursive;
+	font-size: 30px;
+	text-align: center;
+}
+
+.b-form {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	border: 2px solid #FFBD2F;
+	border-radius: 12px;
+	padding: 10px 2% 20px 2%;
+}
+
+
+
+.b-form input {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	height: 32px;
+  border-radius: 12px;
+  border: 1px solid #c4c3c2;
+  padding-left: 3%;
+  outline: none;
+}
+
+.card-element {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	height: 32px;
+    border-radius: 12px;
+    border: 1px solid #c4c3c2;
+    padding-left: 3%;
+    outline: none;
+}
+
+.b-form img {
+
+	width: 90%;
+
+}
+
+
+.b-form textarea {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	min-height: 70px;
+  border-radius: 12px;
+  border: 1px solid #c4c3c2;
+  padding-left: 3%;
+  outline: none;
+
+}
+
+.b-form label {
+	font-family: 'Fjalla One', cursive;
+	display: block;
+	width: 87%;
+	margin: auto;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.b-form input[type="file"] {
+	border: none;
+	font-size: 15px;
+	outline: none;
+}
+
+.b-form input[type="submit"] {
+	background-color: #FFBD2F;
+	width: 35%;
+	color: white;
+	text-shadow:0 1px 0 #c4c3c2, 0 -1px 0 #c4c3c2;
+}
+
+.comeBack {
+	color: #FFBD2F;
+	font-size: 28px;
+}
+
+/****************RESPONSIVE**********************************/
+@media only screen and (max-width:760px) {
+	.nav-bar-mobile {
+		display: block;
+	}
+
+	.nav-bar {
+		display: none;
+	}
+
+	header h1 a {
+		width: 80%;
+	}
+
+	main {
+		padding-left: 10%;
+    padding-right: 10%;
+	}
+
+	.popUp {
+		left: 5%;
+		width: 80%;
+	}
+
+	.b-form {
+		width: 80%;
+	}
+
+	.b-form input[type="submit"] {
+		width: 60%;
+	}
+
+}

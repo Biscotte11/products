@@ -1,0 +1,33 @@
+
+<?php if (empty($oneBeer) == false) { ?>
+
+
+<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+
+<h3>Modifier votre bière !</h3>
+<a href="<?= $requestUrl ?>admin"><i class="fas fa-arrow-circle-left"></i></a>
+
+<form class="b-form" action="<?= $requestUrl ?>/admin/product/update?id=<?=$_GET['id']?>" method="POST" enctype="multipart/form-data">
+
+
+  <input type="text" name="name" placeholder="Nom du produit" value="<?=$oneBeer['Name']?>">
+  <img src="<?= $wwwUrl?>/images/beers/<?=$oneBeer['Photo']?>">
+  <input type="file" id="beer_pict" name="beer_pict"
+       accept="image/png, image/jpeg">
+  <textarea id="description" name="description"
+               rows="5" cols="33"><?=$oneBeer['Description']?>
+  </textarea>
+  <label for="quantity">Quantité</label>
+  <input type="text" name="quantity" placeholder="quantité" value="<?$oneBeer['QuantityInStock']?>">
+  <label for="buyprice">Prix d'achat (€)</label>
+  <input type="text"  name="buyprice" value="<?=number_format($oneBeer['BuyPrice'],2)?>">
+  <label for="saleprice">Prix de vente</label>
+  <input type="text" name="saleprice" value="<?=number_format($oneBeer['SalePrice'],2)?>">
+
+  <input type="hidden" name="beerId" value="<?=$_GET['id']?>">
+
+  <input type="submit" value="Valider">
+</form>
+
+<?php } ?>

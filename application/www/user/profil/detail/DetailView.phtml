@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="<?=$wwwUrl?>/css/adminOrder.css">
+
+
+<div>
+	<table class="t-order">
+		<thead>
+			<th>Id Produit</th>
+			<th>Nom</th>
+			<th>Quantité</th>
+			<th>Prix unitaire</th>
+			<th>Prix total</th>
+		</thead>
+
+		<tbody>
+		<?php foreach($orderdetail as $order) {?>
+			<tr>
+				<td><?=$order['Id']?></td>
+				<td><?=$order['Name']?></td>
+				<td><?=$order['Quantity_ordered']?></td>
+				<td><?=number_format($order['PriceEach'],2)?> €</td>
+				<td><?= number_format($order['Quantity_ordered']*$order['PriceEach'], 2) ?> €</td>
+			</tr>
+		<?php }?>
+
+		</tbody>
+	</table>
+</div>

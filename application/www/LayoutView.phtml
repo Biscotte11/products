@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Beer4you</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/all.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+    <!-- Librairie jQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+    <script src="<?= $wwwUrl ?>/js/classes/Basket.class.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+<body>
+
+<!-- En-tête commune -->
+<nav class="nav-bar">
+    <div class="nav-list1">
+        <img class="header-logo" src="<?= $wwwUrl ?>/images/logo/logo-beer.jpg">
+        <a class="" href="<?= $requestUrl ?>">Accueil</a>
+        <a class="" href="<?= $requestUrl ?>/products">Nos produits</a>
+    </div>
+    <div class="nav-list2">
+
+    <div id="userButton">
+        <i class="fas fa-user"></i>
+        <div class="under-nav-list hide">
+           <!-- lien a mettre -->
+
+
+    <?php if (array_key_exists('user', $_SESSION)){ ?>
+
+        <a class="" href="<?= $requestUrl ?>/user/profil">Mon Profil</a>
+
+        <?php if($_SESSION['user']['role'] == 'admin') {?>
+
+        <a class="" href="<?= $requestUrl ?>/admin">Admin</a>
+
+      <?php } ?>
+
+        <a class="" href="<?= $requestUrl ?>/user/logout">Déconnexion</a>
+
+       <?php } else {?>
+
+        <a class="" href="<?= $requestUrl ?>/user/login">Connexion</a>
+        <a class="" href="<?= $requestUrl ?>/user/register">S'enregistrer</a>
+
+    <?php } ?>
+
+        </div>
+
+    </div>
+
+        <a class="nav-icon" href="<?= $requestUrl ?>/basket"><i class="fas fa-shopping-cart"></i></a>
+        <em class="hide" id="itemBasket"></em>
+
+    </div>
+</nav>
+
+<nav class="nav-bar-mobile">
+    <i class="fas fa-bars" id="burger-button"></i>
+    <div class="nav-column">
+        <a class="" href="<?= $requestUrl ?>">Accueil</a>
+        <a class="" href="<?= $requestUrl ?>/products">Nos produits</a>
+
+        <a class="nav-icon" href="<?= $requestUrl ?>/basket">Panier</a>
+    </div>
+
+</nav>
+
+<header>
+    <h1>
+        <div class="background_opacity"></div>
+        <a href="<?= $requestUrl ?>">
+           Beer4You, de la mauvaise bière, mais de la bière quand même !
+        </a>
+    </h1>
+</header>
+
+<main>
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template']; ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul class="link-list">
+      <!--  <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+        <li><img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>-->
+    </ul>
+    <small>copyright Beer4you</small>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>
